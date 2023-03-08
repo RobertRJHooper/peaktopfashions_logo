@@ -1,0 +1,50 @@
+<svg
+  viewBox="0 0 300 130"
+  xmlns="http://www.w3.org/2000/svg">
+
+  <!-- custom font -->
+  <style>
+      @font-face {
+    font-family: 'Exo2 Italic'; 
+    src: url('font/Exo2-Italic-VariableFont_wght.ttf');
+}
+ 
+    .logo-text {
+      font-family: 'Exo2 Italic', Verdana;
+      font-weight: 900;
+      letter-spacing: 0.08em;        
+    }
+  </style>
+
+  <!-- lights -->
+    <defs>
+    <filter id="spotlight">
+      <feSpecularLighting
+        result="spotlight"
+        specularConstant="0.2"
+        specularExponent="80"
+        lighting-color="#FFF">
+        <fePointLight x="50" y="50" z="220" />
+      </feSpecularLighting>
+      <feComposite
+        in="SourceGraphic"
+        in2="spotlight"
+        operator="arithmetic"
+        k1="0"
+        k2="1"
+        k3="1"
+        k4="0" />
+    </filter>
+  </defs>
+
+  <!-- logo and text -->
+    <image
+    href="logo.svg"
+    x="110"
+    y="10"
+    width="80"
+    height="80"
+    style="filter:url(#spotlight);"/>
+
+  <text x="10%" y="110" textLength="80%" lengthAdjust="spacingAndGlyphs" class="logo-text">PEAKTOP FASHIONS</text>
+</svg>
