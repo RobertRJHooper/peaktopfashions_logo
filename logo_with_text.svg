@@ -21,10 +21,10 @@
     <filter id="spotlight">
       <feSpecularLighting
         result="spotlight"
-        specularConstant="0.2"
-        specularExponent="80"
+        specularConstant="0.15"
+        specularExponent="120"
         lighting-color="#FFF">
-        <fePointLight x="50" y="50" z="220" />
+        <fePointLight x="100" y="50" z="200" />
       </feSpecularLighting>
       <feComposite
         in="SourceGraphic"
@@ -46,5 +46,13 @@
     height="80"
     style="filter:url(#spotlight);"/>
 
-  <text x="10%" y="110" textLength="80%" lengthAdjust="spacingAndGlyphs" class="logo-text">PEAKTOP FASHIONS</text>
+  <text 
+  x="10%" 
+  y="110" 
+  textLength="80%" 
+  lengthAdjust="spacingAndGlyphs"
+  style="filter:url(#spotlight);" 
+  class="logo-text">
+  PEAKTOP FASHIONS
+  </text>
 </svg>
