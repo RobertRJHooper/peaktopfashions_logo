@@ -1,15 +1,9 @@
-<svg
-  viewBox="0 0 1000 1000"
-  xmlns="http://www.w3.org/2000/svg"
-  stroke="red"
-  fill="red">
+<svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="red">
 
+  <!-- mask for the inner cut out area -->
   <mask id="cutout">
-    <!-- Everything under a white pixel will be visible -->
     <rect x="0" y="0" width="1000" height="1000" fill="white" />
-
-    <!-- Everything under a black pixel will be invisible -->
-  <path d="
+    <path d="
     M 80 770
     l 0 -640
     a 50 50 0 0 1 50 -50
@@ -32,11 +26,11 @@
     c 200,0 310,-220 310,-420
     q 0,-200 -200,-200
     l -450 0
-    Z" fill="black"/>
+    Z" fill="black" />
   </mask>
 
-<!-- outer square shape with cutout removed -->
-<path d="
+  <!-- outer square shape with cutout removed -->
+  <path d="
     M 0 1000
     l 0 -900
     a 100 100 0 0 1 100 -100
@@ -44,6 +38,5 @@
     a 100 100 0 0 1 100 100
     l 0 800
     a 100 100 0 0 1 -100 100
-    Z"
-    mask="url(#cutout)"/>
+    Z" mask="url(#cutout)" />
 </svg>
