@@ -24,9 +24,51 @@
     </filter>
   </defs>
 
-  <!-- logo and text -->
-  <image href="logo.svg" x="110" y="10" width="80" height="80" style="filter:url(#spotlight);" />
+  <!-- logo -->
+  <svg x="110" y="10" width="80" height="80" style="filter:url(#spotlight);" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg" stroke="red" fill="red">
 
+  <!-- mask for the inner cut out area -->
+  <mask id="cutout">
+    <rect x="0" y="0" width="1000" height="1000" fill="white" />
+    <path d="
+    M 80 770
+    l 0 -640
+    a 50 50 0 0 1 50 -50
+    l 730 0
+    a 50 50 0 0 1 50 50
+    l 0 730
+    a 50 50 0 0 1 -50 50
+    l -730 0
+    l 150 -530
+    q 30,-120 140,-130
+    l 320 0
+    l -41 150
+    l -240 0
+    l -38 140
+    l 235 0
+    l -34 125
+    l -235 0
+    l -25 90
+    l 230 0
+    c 200,0 310,-220 310,-420
+    q 0,-200 -200,-200
+    l -450 0
+    Z" fill="black" />
+  </mask>
+
+  <!-- outer square shape with cutout removed -->
+  <path d="
+    M 0 1000
+    l 0 -900
+    a 100 100 0 0 1 100 -100
+    l 800 0
+    a 100 100 0 0 1 100 100
+    l 0 800
+    a 100 100 0 0 1 -100 100
+    Z" mask="url(#cutout)" />
+</svg>
+
+  <!-- text -->
   <text x="10%" y="110" textLength="80%" lengthAdjust="spacingAndGlyphs" style="filter:url(#spotlight);"
     class="logo-text">
     PEAKTOP FASHIONS
